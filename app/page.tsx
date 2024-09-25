@@ -13,9 +13,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className={`${inter.className} bg-gray-50`}>
+    <div className={` bg-gray-50`}>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary to-blue-800 text-white">
+      <section className="py-32 bg-gradient-to-br from-primary to-blue-800 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col-reverse md:flex-row items-center">
             <div className="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0 animate-fadeIn">
@@ -100,6 +100,14 @@ export default function Home() {
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
               <div className="text-secondary text-4xl mb-4">
+                <i className="fas fa-lock"></i>
+              </div>
+              <h3 className="text-xl font-semibold text-primary mb-4">Database Support</h3>
+              <p className="text-gray-600 mb-4">Database Support services that assist organizations in managing and maintaining their databases effectively.</p>
+              <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+              <div className="text-secondary text-4xl mb-4">
                 <i className="fas fa-cogs"></i>
               </div>
               <h3 className="text-xl font-semibold text-primary mb-4">Data Engineering</h3>
@@ -108,26 +116,10 @@ export default function Home() {
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
               <div className="text-secondary text-4xl mb-4">
-                <i className="fas fa-cloud"></i>
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-4">Cloud Integration</h3>
-              <p className="text-gray-600 mb-4">Seamlessly integrate your databases with leading cloud platforms.</p>
-              <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-              <div className="text-secondary text-4xl mb-4">
-                <i className="fas fa-lock"></i>
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-4">Data Security</h3>
-              <p className="text-gray-600 mb-4">Implement robust security measures to protect your valuable data assets.</p>
-              <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-              <div className="text-secondary text-4xl mb-4">
                 <i className="fas fa-graduation-cap"></i>
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-4">Training & Support</h3>
-              <p className="text-gray-600 mb-4">Comprehensive training and ongoing support for your team.</p>
+              <h3 className="text-xl font-semibold text-primary mb-4">ICT Training</h3>
+              <p className="text-gray-600 mb-4">Computer, network, and technological training programs. Aimed at forming tech savvy individuals, preparing them to efficiently maximize their IT skills in whatever environment (corporate or non-corporate) they find themselves.</p>
               <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
             </div>
           </div>
