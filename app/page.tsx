@@ -3,7 +3,8 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faRocket, faShieldAlt, faChartLine } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faRocket, faShieldAlt, faChartLine, faUsers, faGraduationCap, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -13,9 +14,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className={` bg-gray-50`}>
+    <div className={`${inter.className} bg-gray-50`}>
       {/* Hero Section */}
-      <section className="py-32 bg-gradient-to-br from-primary to-blue-800 text-white">
+      <section className="pt-24 bg-gradient-to-br from-primary to-blue-800 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col-reverse md:flex-row items-center">
             <div className="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0 animate-fadeIn">
@@ -45,6 +46,51 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center text-primary mb-12">Who We Are</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700">
+              RDAS Solutions Limited operates an Academy which certifies individuals in IT Soft Skills such as Microsoft Word, Excel, PowerPoint, and more. Our mission is to enhance workplace efficiency and effectiveness through targeted skill development.
+            </p>
+            <p className="text-lg text-gray-700">
+              Through extensive research, we've identified a critical gap in the corporate landscape: many workers, both in and out of traditional office settings, underestimate the importance of these essential soft skills. This oversight can lead to decreased productivity and missed opportunities for career advancement.
+            </p>
+            <p className="text-lg text-gray-700">
+              At RDAS Solutions, we're committed to bridging this gap by providing top-tier training and certification programs that empower individuals to excel in their roles and drive organizational success.
+            </p>
+            <Link href="/about" passHref>
+              <button className="bg-secondary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition duration-300 transform hover:scale-105 mt-4">
+                Learn More About Us
+              </button>
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <FontAwesomeIcon icon={faUsers} className="text-4xl text-secondary mb-4" />
+              <h3 className="text-xl font-semibold text-primary mb-2">Expert Team</h3>
+              <p className="text-gray-600">Skilled instructors with industry experience</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <FontAwesomeIcon icon={faGraduationCap} className="text-4xl text-secondary mb-4" />
+              <h3 className="text-xl font-semibold text-primary mb-2">Certifications</h3>
+              <p className="text-gray-600">Recognized qualifications to boost your career</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <FontAwesomeIcon icon={faChalkboardTeacher} className="text-4xl text-secondary mb-4" />
+              <h3 className="text-xl font-semibold text-primary mb-2">Tailored Training</h3>
+              <p className="text-gray-600">Customized programs to meet your needs</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <FontAwesomeIcon icon={faChartLine} className="text-4xl text-secondary mb-4" />
+              <h3 className="text-xl font-semibold text-primary mb-2">Proven Results</h3>
+              <p className="text-gray-600">Measurable improvements in workplace efficiency</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
       {/* Features Section */}
       <section className="py-20 bg-white">
