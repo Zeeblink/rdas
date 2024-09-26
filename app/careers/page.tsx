@@ -2,7 +2,7 @@ import React from 'react';
 
 const CareerPage = () => {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-white min-h-screen">
       {/* Hero Section */}
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto text-center">
