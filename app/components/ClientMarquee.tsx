@@ -1,6 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface Client {
   name: string;
@@ -12,44 +13,33 @@ interface ClientMarqueeProps {
 }
 
 const ClientMarquee: React.FC<ClientMarqueeProps> = ({ clients }) => {
-  const marqueeRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const marquee = marqueeRef.current;
-    if (!marquee) return;
-
-    const marqueeContent = marquee.firstChild as HTMLElement;
-    let scrollAmount = 0;
-    const step = 1; // Adjust this value to change scroll speed
-    
-    const scroll = () => {
-      if (!marquee) return;
-      marquee.scrollTo(scrollAmount, 0);
-      scrollAmount += step;
-      if (scrollAmount >= marqueeContent.scrollWidth / 2) {
-        scrollAmount = 0;
-      }
-      requestAnimationFrame(scroll);
-    };
-
-    requestAnimationFrame(scroll);
-  }, []);
-
   return (
-    <div className="w-full overflow-hidden" ref={marqueeRef}>
-      <div className="flex animate-marquee">
+    <div className="w-full overflow-hidden bg-white py-8 shadow-inner">
+      <motion.div 
+        className="flex"
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ 
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 20,
+            ease: "linear",
+          },
+        }}
+      >
         {clients.concat(clients).map((client, index) => (
-          <div key={index} className="flex-shrink-0 mx-4">
+          <div key={index} className="flex-shrink-0 mx-8">
             <Image 
               src={client.logo} 
               alt={client.name} 
-              width={100} 
-              height={64} 
+              width={120} 
+              height={80} 
               objectFit="contain"
+              className="opacity-70 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

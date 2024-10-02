@@ -1,57 +1,63 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { faBars, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import AboutDropdown from './AboutDropdown';
-
+import { Menu, X } from 'lucide-react';
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 h-20">
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo Section */}
-          <Link href={"/"}>
-            <div className="flex items-center">
-              <img src="/api/placeholder/50/50" alt="RDAS Logo" className="h-12 w-auto" />
-              <span className="text-2xl font-bold text-primary ml-2">RDAS Solutions</span>
+    <>
+      <header className="customContainer bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav className="container mx-auto px-4 h-16">
+          <div className="flex justify-between items-center h-full">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <img src="/rdassl_logo_1.png" alt="RDAS Logo" className="h-8 w-auto" />
             </div>
-          </Link>
 
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-gray-700 hover:text-secondary transition duration-300">Home</Link>
-
-            {/* About Link with Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsAboutOpen(true)}
-              onMouseLeave={() => setIsAboutOpen(false)}
-            >
-              <button className="text-gray-700 hover:text-secondary transition duration-300">
-                About
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="/" className="text-[#003366] hover:text-orange-500 transition-colors">Home</a>
+              <div className="relative group">
+                <button className="text-[#003366] hover:text-orange-500 transition-colors">
+                  About
+                </button>
+              </div>
+              <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
+              <a href="/contact" className="text-[#003366] hover:text-orange-500 transition-colors">Contact</a>
+              <button className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
+                Get Started
               </button>
-              <AboutDropdown isOpen={isAboutOpen} />
             </div>
 
-            <Link href="#services" className="text-gray-700 hover:text-secondary transition duration-300">Services</Link>
-            <Link href="/contact" className="text-gray-700 hover:text-secondary transition duration-300">Contact</Link>
-            <button className="bg-secondary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition duration-300 transform hover:scale-105">
-              Get Started
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-[#003366]"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button className="text-primary">
-              <FontAwesomeIcon icon={faBars} />
-            </button>
-          </div>
-        </div>
-      </nav>
-    </header>
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t shadow-lg">
+              <div className="flex flex-col space-y-4 p-4">
+                <a href="/" className="text-[#003366] hover:text-orange-500 transition-colors">Home</a>
+                <a href="#about" className="text-[#003366] hover:text-orange-500 transition-colors">About</a>
+                <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
+                <a href="/contact" className="text-[#003366] hover:text-orange-500 transition-colors">Contact</a>
+                <button className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
+                  Get Started
+                </button>
+              </div>
+            </div>
+          )}
+        </nav>
+      </header>
+
+
+    </>
   );
 };
 

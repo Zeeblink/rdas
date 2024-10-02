@@ -18,7 +18,28 @@ const config: Config = {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-
+			// backgroundImage : {
+			// 	'hero-bg': "url('/hero.jpg')",
+			// },
+			borderWidth: {
+				1: '1px',
+			},
+			customContainer: {
+        center: true, // This will automatically center the container
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
+        },
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+        },
+      },
 			keyframes: {
 				fadeIn: {
 					'0%': { opacity: '0' },
