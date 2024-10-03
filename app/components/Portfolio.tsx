@@ -9,13 +9,13 @@ const PortfolioShowcase = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'Landing Template For Startups',
-      category: 'Web Design',
-      image: '/landing-template.jpg',
+      title: 'Inventory and Sales management app',
+      category: 'App',
+      image: '/isalesbook.png',
     },
     {
       id: 2,
-      title: 'Find a dream job',
+      title: '',
       category: 'Web',
       image: '/dream-job.jpg',
     },
@@ -36,11 +36,10 @@ const PortfolioShowcase = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl font-semibold text-secondary mb-2">Creative Portfolio</h2>
+          <h2 className="text-xl font-semibold text-secondary mb-2">Creative Portfolio</h2>
           <h3 className="text-4xl font-bold text-primary mb-4">Recent Works</h3>
           <p className="text-primary max-w-2xl mx-auto">
-            There are many variations of passages of Lorem Ipsum available but
-            the majority have suffered alteration in some form.
+            Here are some of our rrecent projects
           </p>
         </motion.div>
 

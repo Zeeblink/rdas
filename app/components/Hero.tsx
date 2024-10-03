@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
     return (
         <section className="overflow-hidden h-screen bg-cover bg-center w-full hero-bg" style={{ backgroundImage: "url('/background.png')" }}>
-            <div className="container mx-auto px-4 py-12 ">
+            <div className="container mx-auto px-4 ">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                     {/* <div className='hero-shape'></div> */}
                     {/* Text Content */}

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import AboutDropdown from './AboutDropdown';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -19,14 +20,15 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-8">
               <a href="/" className="text-[#003366] hover:text-orange-500 transition-colors">Home</a>
               <div className="relative group">
-                <button className="text-[#003366] hover:text-orange-500 transition-colors">
+                <button className="text-[#003366] hover:text-orange-500 transition-colors" onMouseEnter={() => setIsAboutOpen(true)} onMouseLeave={() => setIsAboutOpen(false)}>
+                  <AboutDropdown isOpen={isAboutOpen} />
                   About
                 </button>
               </div>
               <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
               <a href="/contact" className="text-[#003366] hover:text-orange-500 transition-colors">Contact</a>
               <button className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
-                Get Started
+                Contact Us
               </button>
             </div>
 

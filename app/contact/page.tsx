@@ -65,6 +65,7 @@ const ContactPage: React.FC = () => {
       {/* Contact Form Section */}
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto max-w-2xl">
+          <h2 className="text-4xl font-bold text-primary text-center mb-6">Have a Project in Mind?</h2>
           <h2 className="text-3xl font-bold text-primary text-center mb-6">Send Us a Message</h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>

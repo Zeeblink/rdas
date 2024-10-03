@@ -42,68 +42,10 @@ const Sections = () => {
 
 
 
-            {/* Services Section */}
-            {/* <section className="py-20 bg-white">
-                <div className="container mx-auto px-6">
-                    <motion.h2
-                        className="text-4xl font-bold text-center text-primary mb-16"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        Our Digital Solutions
-                    </motion.h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <motion.div
-                            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="text-secondary text-4xl mb-4">
-                                <FontAwesomeIcon icon={faCode} />
-                            </div>
-                            <h3 className="text-xl font-semibold text-primary mb-4">Custom Software Development</h3>
-                            <p className="text-gray-600 mb-4">Tailored software solutions to meet your unique business needs and challenges.</p>
-                            <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
-                        </motion.div>
-                        <motion.div
-                            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="text-secondary text-4xl mb-4">
-                                <FontAwesomeIcon icon={faMobileAlt} />
-                            </div>
-                            <h3 className="text-xl font-semibold text-primary mb-4">Mobile App Development</h3>
-                            <p className="text-gray-600 mb-4">Innovative mobile applications for iOS and Android platforms to engage your customers.</p>
-                            <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
-                        </motion.div>
-                        <motion.div
-                            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="text-secondary text-4xl mb-4">
-                                <FontAwesomeIcon icon={faCloud} />
-                            </div>
-                            <h3 className="text-xl font-semibold text-primary mb-4">Cloud Solutions</h3>
-                            <p className="text-gray-600 mb-4">Scalable and secure cloud-based solutions to optimize your business operations.</p>
-                            <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
-                        </motion.div>
-                    </div>
-                </div>
-            </section> */}
-
+            
             <PortfolioShowcase/>
             {/* About Us Section */}
-            <section className="py-20 bg-gray-100">
+            <section className="py-20 bg-primary">
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-center">
                         <motion.div
@@ -113,11 +55,11 @@ const Sections = () => {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-4xl font-bold text-primary mb-6">Who We Are</h2>
-                            <p className="text-lg text-gray-700 mb-6">
+                            <h2 className="text-4xl font-bold text-white mb-6">Who We Are</h2>
+                            <p className="text-lg text-white mb-6">
                                 RDAS Solutions is a leading digital solutions company specializing in custom software development. We combine innovative approaches with creative thinking to deliver cutting-edge solutions that drive business growth and efficiency.
                             </p>
-                            <p className="text-lg text-gray-700 mb-6">
+                            <p className="text-lg text-white mb-6">
                                 Our team of expert developers and designers are committed to creating tailored software solutions that address the unique challenges of each client, ensuring measurable improvements in productivity and competitiveness.
                             </p>
                             <Link href="/about" passHref>
@@ -138,9 +80,7 @@ const Sections = () => {
                             viewport={{ once: true }}
                         >
                             {/* Placeholder for company image */}
-                            <div className="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-                                <span className="text-gray-600">Company Image</span>
-                            </div>
+                            <Image src="/about2.png" alt="Company Image" width={500} height={500} />
                         </motion.div>
                     </div>
                 </div>
@@ -248,3 +188,77 @@ const Sections = () => {
 }
 
 export default Sections
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* Services Section */}
+            {/* <section className="py-20 bg-white">
+                <div className="container mx-auto px-6">
+                    <motion.h2
+                        className="text-4xl font-bold text-center text-primary mb-16"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                    >
+                        Our Digital Solutions
+                    </motion.h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        <motion.div
+                            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="text-secondary text-4xl mb-4">
+                                <FontAwesomeIcon icon={faCode} />
+                            </div>
+                            <h3 className="text-xl font-semibold text-primary mb-4">Custom Software Development</h3>
+                            <p className="text-gray-600 mb-4">Tailored software solutions to meet your unique business needs and challenges.</p>
+                            <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
+                        </motion.div>
+                        <motion.div
+                            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="text-secondary text-4xl mb-4">
+                                <FontAwesomeIcon icon={faMobileAlt} />
+                            </div>
+                            <h3 className="text-xl font-semibold text-primary mb-4">Mobile App Development</h3>
+                            <p className="text-gray-600 mb-4">Innovative mobile applications for iOS and Android platforms to engage your customers.</p>
+                            <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
+                        </motion.div>
+                        <motion.div
+                            className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="text-secondary text-4xl mb-4">
+                                <FontAwesomeIcon icon={faCloud} />
+                            </div>
+                            <h3 className="text-xl font-semibold text-primary mb-4">Cloud Solutions</h3>
+                            <p className="text-gray-600 mb-4">Scalable and secure cloud-based solutions to optimize your business operations.</p>
+                            <a href="#" className="text-secondary hover:text-primary transition duration-300">Learn more →</a>
+                        </motion.div>
+                    </div>
+                </div>
+            </section> */}

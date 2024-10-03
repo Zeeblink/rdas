@@ -27,7 +27,7 @@ const config: Config = {
 			customContainer: {
         center: true, // This will automatically center the container
         padding: {
-          DEFAULT: '1rem',
+          DEFAULT: '0rem',
           sm: '2rem',
           lg: '4rem',
           xl: '5rem',
