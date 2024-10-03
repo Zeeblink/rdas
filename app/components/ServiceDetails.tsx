@@ -4,18 +4,18 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-interface ServiceDetailsProps {
-  service: string;
+interface Service {
+  title: string;
+  description: string;
+  longDescription: string;
+  image: string;
 }
-const ServiceDetails: React.FC<ServiceDetailsProps> = () => {
-  // This would be passed as a prop or fetched based on the route
-  const serviceData = {
-    title: 'App Development',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.',
-    longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper proin libero nunc consequat interdum varius. Quam pellentesque nec nam.',
-    image: '/app-development.jpg',
-  };
 
+interface ServiceDetailsProps {
+  service: Service;
+}
+
+const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
   const services = [
     'Website Development',
     'Graphic Design',
@@ -87,13 +87,13 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <img
-              src={serviceData.image}
-              alt={serviceData.title}
+              src={service.image}
+              alt={service.title}
               className="w-full h-64 object-cover rounded-lg mb-6"
             />
-            <h2 className="text-3xl font-semibold text-[#000033] mb-4">{serviceData.title}</h2>
-            <p className="text-gray-600 mb-6">{serviceData.description}</p>
-            <p className="text-gray-600">{serviceData.longDescription}</p>
+            <h2 className="text-3xl font-semibold text-[#000033] mb-4">{service.title}</h2>
+            <p className="text-gray-600 mb-6">{service.description}</p>
+            <p className="text-gray-600">{service.longDescription}</p>
           </motion.div>
         </div>
       </div>

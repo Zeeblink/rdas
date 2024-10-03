@@ -30,11 +30,11 @@ export default function RootLayout({
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
+        
         <main className="pt-20"> {/* Add padding-top equal to header height */}
-          {children}
+        <Header />{children}<Footer />
         </main>
-        <Footer />
+        
       </body>
     </html>
   );

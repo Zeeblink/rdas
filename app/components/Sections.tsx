@@ -9,6 +9,7 @@ import ClientMarquee from '../components/ClientMarquee';
 import ServicesShowcase from '../components/ServicesShowcase';
 import PortfolioShowcase from './Portfolio'
 import Hero from './Hero'
+import ContactSection from './ContactSection'
 const Sections = () => {
     const clients = [
         { name: 'FBNQuest', logo: '/client-1.jpg' },
@@ -141,6 +142,8 @@ const Sections = () => {
                     </div>
                 </div>
             </section>
+
+            <ContactSection/>
 
             {/* CTA Section */}
             <section className="bg-gradient-to-br from-primary to-blue-800 text-white py-24 relative overflow-hidden">

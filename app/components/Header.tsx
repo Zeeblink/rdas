@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import AboutDropdown from './AboutDropdown';
+import Link from 'next/link'
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -13,7 +15,9 @@ const Header = () => {
           <div className="flex justify-between items-center h-full">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <img src="/rdassl_logo_1.png" alt="RDAS Logo" className="h-8 w-auto" />
+              <Link href="/" aria-label="Homepage">
+                <img src="/rdassl_logo_1.png" alt="RDAS Logo" className="h-8 w-auto" />
+              </Link>
             </div>
 
             {/* Desktop Navigation */}

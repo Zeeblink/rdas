@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link'; // Import Link from Next.js
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (
@@ -18,33 +17,29 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Useful Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
-                  <FontAwesomeIcon icon={faChevronRight} className="mr-2" />
-                  <span>Home</span>
+                <Link href="/" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
+                  <span>&gt; Home</span>
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
-                  <FontAwesomeIcon icon={faChevronRight} className="mr-2" />
-                  <span>About</span>
+                <Link href="/about" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">  
+                  <span>&gt; About</span>
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
-                  <FontAwesomeIcon icon={faChevronRight} className="mr-2" />
-                  <span>Services</span>
+                <Link href="#services" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
+                  <span>&gt; Services</span>
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
-                  <FontAwesomeIcon icon={faChevronRight} className="mr-2" />
-                  <span>Careers</span>
+                <Link href="/careers" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
+                  {/* <FontAwesomeIcon icon={faChevronRight} className="mr-2" /> */}
+                  <span>&gt; Careers</span>
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
-                  <FontAwesomeIcon icon={faChevronRight} className="mr-2" />
-                  <span>Contact</span>
+                <Link href="/contact" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
+                  <span>&gt; Contact</span>
                 </Link>
               </li>
             </ul>

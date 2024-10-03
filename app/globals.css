@@ -4,7 +4,7 @@
 
 
 
-.hero-shape {
+/* .hero-shape {
   position: absolute;
   top: 0;
   right: 0;
@@ -15,9 +15,9 @@
   background-image: url("/hero-image3.png");
   background-size: cover;
   background-position: center;
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero-shape {
     width: 100%;
     clip-path: circle(50% at 50% -90%);
@@ -25,7 +25,7 @@
   .hero-bg {
     background-position: left;
   }
-}
+} */
 
 /* @layer base {
   :root {
