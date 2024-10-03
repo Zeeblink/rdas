@@ -46,7 +46,7 @@ const Header = () => {
             <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t shadow-lg">
               <div className="flex flex-col space-y-4 p-4">
                 <a href="/" className="text-[#003366] hover:text-orange-500 transition-colors">Home</a>
-                <a href="#about" className="text-[#003366] hover:text-orange-500 transition-colors">About</a>
+                <a href="/about" className="text-[#003366] hover:text-orange-500 transition-colors">About</a>
                 <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
                 <a href="/contact" className="text-[#003366] hover:text-orange-500 transition-colors">Contact</a>
                 <button className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
