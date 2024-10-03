@@ -7,7 +7,7 @@ import { faArrowRight, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-i
 interface ServiceDetailsProps {
   service: string;
 }
-const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
+const ServiceDetails: React.FC<ServiceDetailsProps> = () => {
   // This would be passed as a prop or fetched based on the route
   const serviceData = {
     title: 'App Development',
@@ -65,7 +65,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
               </ul>
             </div>
             <div className="bg-[#4080FF] text-white p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4">Let's talk</h3>
+              <h3 className="text-2xl font-semibold mb-4">Let&apos;s talk</h3>
               <p className="mb-2">
                 <FontAwesomeIcon icon={faPhone} className="mr-2" />
                 (+550) 647 876 093

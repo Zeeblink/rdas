@@ -48,7 +48,7 @@ const AboutPage: React.FC = () => {
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-primary">Data Analytics and Support</h2>
             <p className="text-gray-700">
-              At RDAS Solutions Limited, we offer a wide range of services by combining innovative approaches, creative thinking, and a deep understanding of today's fast-moving technology landscape. Our services include Data Analytics, Database Support, Data Engineering, IT Training, and IT Engineering.
+              At RDAS Solutions Limited, we offer a wide range of services by combining innovative approaches, creative thinking, and a deep understanding of today&apos;s fast-moving technology landscape. Our services include Data Analytics, Database Support, Data Engineering, IT Training, and IT Engineering.
             </p>
             <h2 className="text-2xl font-bold text-primary">Our Skills</h2>
             <p className="text-gray-700">
@@ -76,7 +76,7 @@ const AboutPage: React.FC = () => {
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-primary">Why Choose Us?</h2>
             <p className="text-gray-700">
-              RDAS Solutions Limited stands out for its dedication to professional training and high-end database solutions. Whether you're looking to improve your internal processes or gain certifications in sought-after technologies, we are here to provide top-tier services that align with the latest industry standards.
+              RDAS Solutions Limited stands out for its dedication to professional training and high-end database solutions. Whether you&apos;re looking to improve your internal processes or gain certifications in sought-after technologies, we are here to provide top-tier services that align with the latest industry standards.
             </p>
           </div>
           {/* Placeholder for another image */}

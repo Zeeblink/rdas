@@ -1,8 +1,8 @@
 'use client'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faRocket, faShieldAlt, faChartLine, faUsers, faGraduationCap, faChalkboardTeacher, faBullseye, faDatabase, faCode, faMobileAlt, faCloud, faLightbulb } from '@fortawesome/free-solid-svg-icons'
+import { faRocket, faUsers, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import Image from 'next/image'
 import ClientMarquee from '../components/ClientMarquee';
@@ -170,7 +170,7 @@ const Sections = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        Rdas Solutions Limited specializes in Educational and Relational Database Management, offering a wide range of services by combining innovative approaches, creative thinking, and a full understanding of today's fast-moving technology world.
+                        Rdas Solutions Limited specializes in Educational and Relational Database Management, offering a wide range of services by combining innovative approaches, creative thinking, and a full understanding of today&apos;s fast-moving technology world.
                     </motion.p>
                     <motion.button
                         className="bg-white text-secondary px-10 py-4 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-lg text-lg font-semibold"

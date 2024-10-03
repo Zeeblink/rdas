@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faMobileAlt, faCloud, faGraduationCap, faDatabase, faCogs, faChartBar } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faMobileAlt, faGraduationCap, faDatabase, faCogs, faChartBar } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 const ServicesShowcase = () => {
