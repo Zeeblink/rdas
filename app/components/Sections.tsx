@@ -9,7 +9,7 @@ import ClientMarquee from '../components/ClientMarquee';
 import ServicesShowcase from '../components/ServicesShowcase';
 import PortfolioShowcase from './Portfolio'
 import Hero from './Hero'
-import ContactSection from './ContactSection'
+import ContactSection from './ContactForm'
 const Sections = () => {
     const clients = [
         { name: 'FBNQuest', logo: '/client-1.jpg' },

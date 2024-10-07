@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Hero = () => {
     return (
@@ -31,9 +32,10 @@ const Hero = () => {
                             We provide cutting-edge software solutions to drive innovation
                             and success in your business.
                         </p>
-                        <button className="bg-[#003366] text-white px-6 py-2 rounded text-base md:text-lg font-semibold hover:bg-opacity-90 transition-colors">
-                            Explore Our Services
-                        </button>
+                        <Link className="bg-[#003366] text-white px-6 py-2 rounded text-base md:text-lg font-semibold hover:bg-opacity-90 transition-colors"
+                            href="#consultation">
+                            Schedule a Free Consultation
+                        </Link>
                     </div>
                 </div>
             </div>

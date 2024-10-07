@@ -1,8 +1,16 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-const ContactSection = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  firstName: string;
+  lastName: string;
+  company: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
     company: '',
@@ -12,10 +20,11 @@ const ContactSection = () => {
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log(formData);
@@ -23,7 +32,7 @@ const ContactSection = () => {
 
   return (
     <div className="flex flex-col md:flex-row bg-[#000033] text-white">
-      <div className="md:w-1/2 p-8">
+      <div className="md:w-1/2 p-8 md:24">
         <h1 className="text-4xl font-bold mb-4">Let&apos;s build something great together.</h1>
         <p className="mb-4">We&apos;re happy to answer any questions you may have and help you determine which of our services best fits your needs.</p>
         <p className="mb-4">
@@ -107,4 +116,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default ContactForm;

@@ -30,10 +30,11 @@ const Header = () => {
                 </button>
               </div>
               <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
-              <a href="/contact" className="text-[#003366] hover:text-orange-500 transition-colors">Contact</a>
-              <button className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
+              <a href="/careers" className="text-[#003366] hover:text-orange-500 transition-colors">Careers</a>
+              <Link className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"
+              href="/contact">
                 Contact Us
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -52,10 +53,11 @@ const Header = () => {
                 <a href="/" className="text-[#003366] hover:text-orange-500 transition-colors">Home</a>
                 <a href="/about" className="text-[#003366] hover:text-orange-500 transition-colors">About</a>
                 <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
-                <a href="/contact" className="text-[#003366] hover:text-orange-500 transition-colors">Contact</a>
-                <button className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
-                  Get Started
-                </button>
+                <a href="/careers" className="text-[#003366] hover:text-orange-500 transition-colors">Careers</a>
+                <Link className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"
+                  href="/contact">
+                  Contact Us
+                </Link>
               </div>
             </div>
           )}

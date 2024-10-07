@@ -1,5 +1,6 @@
 "use client"
-import React, { useState } from 'react';
+import { useState } from 'react';
+import ContactForm from '../components/ContactForm';
 
 interface ContactFormFields {
   name: string;
@@ -61,13 +62,56 @@ const ContactPage: React.FC = () => {
       </div>
     </div>
   </section>
-
+    
   {/* Contact Form Section */}
   <section className="bg-gray-100 py-16">
-    <div className="container mx-auto max-w-lg md:max-w-2xl px-4 sm:px-6 lg:px-8">
-      <h2 className="text-4xl font-bold text-primary text-center mb-6">Have a Project in Mind?</h2>
-      <h2 className="text-3xl font-bold text-primary text-center mb-6">Send Us a Message</h2>
-      <form className="space-y-6" onSubmit={handleSubmit}>
+    {/* <div className="container mx-auto max-w-lg md:max-w-2xl px-4 sm:px-6 lg:px-8"> */}
+      <h2 className="text-4xl font-bold text-primary text-center mb-12">Have a Project in Mind? We're Here to Help!</h2>
+    {/* </div> */}
+    <ContactForm/>
+  </section>
+
+  {/* Map Section */}
+  <section className="py-16">
+    <div className="container mx-auto">
+      <h2 className="text-3xl font-bold text-primary text-center mb-6">Our Location</h2>
+      <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden shadow-md">
+        <iframe
+          className="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.6255872786643!2d3.3705380163674355!3d6.517047693237738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c3a2dc87cc9%3A0xc5c23f02f8490328!2sSabo%2C%20Yaba%2C%20Lagos!5e0!3m2!1sen!2sng!4v1601313434901!5m2!1sen!2sng"
+          allowFullScreen
+          loading="lazy"
+          title="RDAS Solutions Location"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+  );
+};
+
+export default ContactPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <form className="space-y-6" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name" className="block text-gray-700 mb-2">Name</label>
           <input
@@ -109,28 +153,4 @@ const ContactPage: React.FC = () => {
             Send Message
           </button>
         </div>
-      </form>
-    </div>
-  </section>
-
-  {/* Map Section */}
-  <section className="py-16">
-    <div className="container mx-auto">
-      <h2 className="text-3xl font-bold text-primary text-center mb-6">Our Location</h2>
-      <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden shadow-md">
-        <iframe
-          className="w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.6255872786643!2d3.3705380163674355!3d6.517047693237738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c3a2dc87cc9%3A0xc5c23f02f8490328!2sSabo%2C%20Yaba%2C%20Lagos!5e0!3m2!1sen!2sng!4v1601313434901!5m2!1sen!2sng"
-          allowFullScreen
-          loading="lazy"
-          title="RDAS Solutions Location"
-        ></iframe>
-      </div>
-    </div>
-  </section>
-</div>
-
-  );
-};
-
-export default ContactPage;
+      </form> */}
