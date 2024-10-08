@@ -9,7 +9,7 @@ const PortfolioShowcase = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'Inventory and Sales management app',
+      title: 'Isalesbook.com - Inventory and Sales management app',
       category: 'App',
       image: '/isalesbook.png',
     },
