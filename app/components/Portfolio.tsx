@@ -13,12 +13,12 @@ const PortfolioShowcase = () => {
       category: 'App',
       image: '/isalesbook.png',
     },
-    {
-      id: 2,
-      title: '',
-      category: 'Web',
-      image: '/dream-job.jpg',
-    },
+    // {
+    //   id: 2,
+    //   title: '',
+    //   category: 'Web',
+    //   image: '/dream-job.jpg',
+    // },
     // Add more portfolio items as needed
   ];
 

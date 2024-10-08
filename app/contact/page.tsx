@@ -1,44 +1,13 @@
 "use client"
-import { useState } from 'react';
 import ContactForm from '../components/ContactForm';
-
-interface ContactFormFields {
-  name: string;
-  email: string;
-  message: string;
-}
-
 const ContactPage: React.FC = () => {
-  // State to handle form input values
-  const [formFields, setFormFields] = useState<ContactFormFields>({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  // Handle input changes
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
-    const { id, value } = e.target;
-    setFormFields((prevFields) => ({
-      ...prevFields,
-      [id]: value
-    }));
-  };
-
-  // Handle form submission (e.g., sending data)
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
-    // Logic for form submission, e.g., sending the formFields to an API
-    console.log(formFields);
-  };
-
   return (
     <div className="bg-gray-50 min-h-screen">
   {/* Hero Section */}
   <section className="bg-primary text-white py-16">
     <div className="container mx-auto text-center">
       <h1 className="text-4xl font-bold mb-4 md:text-5xl">Get in Touch with Us</h1>
-      <p className="text-xl md:text-2xl">We’re here to help. Reach out with any questions or inquiries.</p>
+      <p className="text-xl md:text-2xl">We&apos;re here to help. Reach out with any questions or inquiries.</p>
     </div>
   </section>
 
@@ -66,7 +35,7 @@ const ContactPage: React.FC = () => {
   {/* Contact Form Section */}
   <section className="bg-gray-100 py-16">
     {/* <div className="container mx-auto max-w-lg md:max-w-2xl px-4 sm:px-6 lg:px-8"> */}
-      <h2 className="text-4xl font-bold text-primary text-center mb-12">Have a Project in Mind? We're Here to Help!</h2>
+      <h2 className="text-4xl font-bold text-primary text-center mb-12">Have a Project in Mind? We&apos;re Here to Help!</h2>
     {/* </div> */}
     <ContactForm/>
   </section>

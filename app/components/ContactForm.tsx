@@ -10,6 +10,7 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
+  // State to handle form input values..
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -18,21 +19,43 @@ const ContactForm: React.FC = () => {
     phone: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
+  // Handle input changes..
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Handle Form Submission..
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission logic here
+    setLoading(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          contentType: 'application/json'
+        }
+      });
+      if (!response.ok) {
+        throw new Error('Failed to send form');
+      }
+      console.log('Form submitted successfully');
+      setSuccess(true)
+      setLoading(false)
+      // alert('Form submitted successfully');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
     console.log(formData);
   };
 
   return (
-    <div className="flex flex-col md:flex-row bg-[#000033] text-white">
-      <div className="md:w-1/2 p-8 md:24">
+    <div className="flex flex-col md:flex-row bg-[#000033]">
+      <div className="md:w-1/2 p-8 md:24 text-white">
         <h1 className="text-4xl font-bold mb-4">Let&apos;s build something great together.</h1>
         <p className="mb-4">We&apos;re happy to answer any questions you may have and help you determine which of our services best fits your needs.</p>
         <p className="mb-4">
@@ -78,7 +101,6 @@ const ContactForm: React.FC = () => {
             placeholder="Company / Organization"
             className="w-full p-2 border border-gray-300 rounded mb-4"
             onChange={handleChange}
-            required
           />
           <input
             type="email"
@@ -106,10 +128,11 @@ const ContactForm: React.FC = () => {
           ></textarea>
           <button
             type="submit"
-            className="w-full bg-[#FF6600] text-white p-2 rounded hover:bg-[#003366] transition-colors"
+            className={"w-full bg-[#FF6600] text-white p-2 rounded hover:bg-[#003366] transition-colors" + (loading ? " cursor-not-allowed opacity-50" : "")}
           >
             Submit
           </button>
+          {success ? <p className="text-green-500 text-center">Thank you for your message. We will get back to you soon.</p> : null}
         </form>
       </div>
     </div>
