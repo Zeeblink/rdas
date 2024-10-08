@@ -36,8 +36,8 @@ const ServicesShowcase = () => {
       image: 'https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     },
     {
-      title: 'Data Analytics',
-      description: 'Analyze raw data to make conclusions about information.',
+      title: 'Artificial Intelligence',
+      description: 'Develop systems that can learn, reason, and adapt to perform complex tasks autonomously.',
       icon: faChartBar,
       image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     },
