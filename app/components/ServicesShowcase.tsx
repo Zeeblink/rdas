@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faMobileAlt, faGraduationCap, faDatabase, faCogs, faChartBar } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faMobileAlt, faGraduationCap, faDatabase, faCogs, faRobot } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 const ServicesShowcase = () => {
@@ -38,7 +38,7 @@ const ServicesShowcase = () => {
     {
       title: 'Artificial Intelligence',
       description: 'Develop systems that can learn, reason, and adapt to perform complex tasks autonomously.',
-      icon: faChartBar,
+      icon: faRobot,
       image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     },
   ];
