@@ -33,7 +33,7 @@ const ContactPage: React.FC = () => {
   </section>
     
   {/* Contact Form Section */}
-  <section className="bg-gray-100 py-16">
+  <section className="bg-white py-16">
     {/* <div className="container mx-auto max-w-lg md:max-w-2xl px-4 sm:px-6 lg:px-8"> */}
       <h2 className="text-4xl font-bold text-primary text-center mb-12">Have a Project in Mind? We&apos;re Here to Help!</h2>
     {/* </div> */}

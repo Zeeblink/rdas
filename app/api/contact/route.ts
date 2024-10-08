@@ -16,9 +16,9 @@ export async function POST(request: NextRequest) {
     try {
         await transporter.sendMail({
             from: 'no-reply',
-            to: 'zeeblink7@gmail.com', 
-            subject: 'New contact form submission',
-            text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}\nPhone: ${phone}`,
+            to: 'info@rdas.com.ng',
+            subject: 'You have a new consultation request',
+            text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nMessage: ${message}\nPhone: ${phone}`,
         });
 
         return NextResponse.json({ message: 'Message sent successfully' });

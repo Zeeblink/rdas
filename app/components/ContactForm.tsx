@@ -105,7 +105,7 @@ const ContactForm: React.FC = () => {
           <input
             type="email"
             name="email"
-            placeholder="Company email"
+            placeholder="Email"
             className="w-full p-2 border border-gray-300 rounded mb-4"
             onChange={handleChange}
             required
