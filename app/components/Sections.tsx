@@ -143,10 +143,12 @@ const Sections = () => {
                 </div>
             </section>
 
+            <section id="consultation">
             <ContactSection/>
+            </section>
 
             {/* CTA Section */}
-            <section id="#consultation" className="bg-gradient-to-br from-primary to-blue-800 text-white py-24 relative overflow-hidden">
+            <section className="bg-gradient-to-br from-primary to-blue-800 text-white py-24 relative overflow-hidden">
                 <motion.div
                     className="absolute inset-0 z-0"
                     initial={{ opacity: 0 }}
