@@ -17,17 +17,13 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen }) => {
         className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-secondary transition duration-300">
         What We Believe In
       </Link>
-      <Link href="/newsroom"
-        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-secondary transition duration-300">
-        Newsroom
-      </Link>
       <Link href="/careers"
         className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-secondary transition duration-300">
         Careers
       </Link>
       <Link href="/investors"
         className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-secondary transition duration-300">
-        Investorss
+        Investors
       </Link>
     </div>
   );
