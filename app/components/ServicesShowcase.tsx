@@ -81,7 +81,7 @@ const ServicesShowcase = () => {
                 <FontAwesomeIcon icon={service.icon} className="text-secondary text-3xl mb-4" />
                 <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <a
+                {/* <a
                   href="#"
                   className="text-secondary hover:text-[#003366] transition-colors duration-300 inline-flex items-center"
                 >
@@ -100,7 +100,7 @@ const ServicesShowcase = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </a>
+                </a> */}
               </div>
             </motion.div>
           ))}

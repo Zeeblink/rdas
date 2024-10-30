@@ -36,8 +36,8 @@ const PortfolioShowcase = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-xl font-semibold text-secondary mb-2">Creative Portfolio</h2>
-          <h3 className="text-4xl font-bold text-primary mb-4">Recent Works</h3>
+          {/* <h2 className="text-xl font-semibold text-secondary mb-2">Creative Portfolio</h2> */}
+          <h3 className="text-4xl font-bold text-primary mb-4">Recent Projects</h3>
           <p className="text-primary max-w-2xl mx-auto">
             Here are some of our rrecent projects
           </p>
