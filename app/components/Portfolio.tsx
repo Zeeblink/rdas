@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const PortfolioShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -12,6 +13,7 @@ const PortfolioShowcase = () => {
       title: 'Isalesbook.com - Inventory and Sales management app',
       category: 'App',
       image: '/isalesbook.png',
+      link: 'https://isalesbook.com/',
     },
     // {
     //   id: 2,
@@ -22,8 +24,8 @@ const PortfolioShowcase = () => {
     // Add more portfolio items as needed
   ];
 
-  const filteredItems = activeFilter === 'All' 
-    ? portfolioItems 
+  const filteredItems = activeFilter === 'All'
+    ? portfolioItems
     : portfolioItems.filter(item => item.category === activeFilter);
 
   return (
@@ -39,7 +41,7 @@ const PortfolioShowcase = () => {
           {/* <h2 className="text-xl font-semibold text-secondary mb-2">Creative Portfolio</h2> */}
           <h3 className="text-4xl font-bold text-primary mb-4">Recent Projects</h3>
           <p className="text-primary max-w-2xl mx-auto">
-            Here are some of our rrecent projects
+            Here are some of our recent projects
           </p>
         </motion.div>
 
@@ -54,11 +56,10 @@ const PortfolioShowcase = () => {
             <motion.button
               key={index}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full ${
-                activeFilter === filter
+              className={`px-6 py-2 rounded-full ${activeFilter === filter
                   ? 'bg-secondary text-white'
                   : 'bg-white text-gray-600 hover:bg-gray-200'
-              } transition-colors duration-300`}
+                } transition-colors duration-300`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -72,25 +73,27 @@ const PortfolioShowcase = () => {
           layout
         >
           {filteredItems.map((item) => (
-            <motion.div
-              key={item.id}
-              layout
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-lg overflow-hidden shadow-lg"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h4 className="text-xl font-semibold text-[#000033] mb-2">{item.title}</h4>
-                <p className="text-gray-600">{item.category}</p>
-              </div>
-            </motion.div>
+            <Link href={item.link} key={item.id} target='_blank'>
+              <motion.div
+                key={item.id}
+                layout
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-lg overflow-hidden shadow-lg"
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-xl font-semibold text-[#000033] mb-2">{item.title}</h4>
+                  <p className="text-gray-600">{item.category}</p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>

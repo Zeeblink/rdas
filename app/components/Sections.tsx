@@ -21,7 +21,7 @@ const Sections = () => {
 
     return (
         <>
-            <Hero/>
+            <Hero />
 
             {/* Clients Section */}
             <section className="">
@@ -43,8 +43,8 @@ const Sections = () => {
 
 
 
-            
-            <PortfolioShowcase/>
+
+            <PortfolioShowcase />
             {/* About Us Section */}
             <section className="py-20 bg-primary">
                 <div className="container mx-auto px-6">
@@ -65,7 +65,7 @@ const Sections = () => {
                             </p>
                             <Link href="/about" passHref>
                                 <motion.button
-                                    className="bg-secondary text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition duration-300 transform hover:scale-105 text-lg font-semibold shadow-lg"
+                                    className="bg-secondary text-white px-8 py-4 rounded-xl hover:bg-opacity-90 transition duration-300 transform hover:scale-105 text-lg font-semibold shadow-lg"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -144,7 +144,7 @@ const Sections = () => {
             </section>
 
             <section id="consultation">
-            <ContactSection/>
+                <ContactSection />
             </section>
 
             {/* CTA Section */}
@@ -177,13 +177,21 @@ const Sections = () => {
                     >
                         Rdas Solutions Limited specializes in Educational and Relational Database Management, offering a wide range of services by combining innovative approaches, creative thinking, and a full understanding of today&apos;s fast-moving technology world.
                     </motion.p>
-                    <motion.button
-                        className="bg-white text-secondary px-10 py-4 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-lg text-lg font-semibold"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="text-center mt-12"
                     >
-                        Request a Quote
-                    </motion.button>
+                        <a
+                            href="#consultation"
+                            className="inline-block bg-secondary text-white px-8 py-3 rounded-xl hover:bg-[#003366] transition-colors duration-300 text-lg font-semibold"
+                        >
+
+                            Schedule a Free Consultation
+                        </a>
+                    </motion.div>
                 </div>
             </section>
 
@@ -209,8 +217,8 @@ export default Sections
 
 
 
-{/* Services Section */}
-            {/* <section className="py-20 bg-white">
+{/* Services Section */ }
+{/* <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
                     <motion.h2
                         className="text-4xl font-bold text-center text-primary mb-16"
