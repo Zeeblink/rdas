@@ -73,13 +73,13 @@ const Footer = () => {
         <div className="mt-8 text-center">
           <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
           <div className="flex justify-center space-x-4">
-            <Link href="#" className="hover:text-[#153C99]">
+            <Link target='_blank' href="https://www.facebook.com/profile.php?id=100087000948577" className="hover:text-[#153C99]">
               <FontAwesomeIcon icon={faFacebook} />
             </Link>
-            <Link href="#" className="hover:text-[#FF6600]">
+            {/* <Link target='_blank' href="#" className="hover:text-[#FF6600]">
               <FontAwesomeIcon icon={faInstagram} />
-            </Link>
-            <Link href="#" className="hover:text-[#153C99]">
+            </Link> */}
+            <Link target='_blank' href="https://www.linkedin.com/company/rdas-softtech/" className="hover:text-[#153C99]">
               <FontAwesomeIcon icon={faLinkedin} />
             </Link>
           </div>
