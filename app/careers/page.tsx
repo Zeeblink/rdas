@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next'
-import { defaultMetadata } from '../lib/metadata'
+import { defaultMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = {
   title: 'Careers at RDAS Solutions - Join Our Team | RDAS Solutions Limited',

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import type { Metadata } from 'next'
-import { defaultMetadata } from '../lib/metadata'
+import { defaultMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = {
   title: 'About RDAS Solutions - Our Story & Mission | RDAS Solutions Limited',

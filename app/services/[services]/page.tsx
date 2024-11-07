@@ -1,4 +1,4 @@
-import ServiceDetails from '@/app/components/ServiceDetails';
+import ServiceDetails from '@/components/ServiceDetails';
 
 interface ServiceData {
   name: string;

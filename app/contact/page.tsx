@@ -1,6 +1,6 @@
-import ContactForm from '../components/ContactForm';
+import ContactForm from '@/components/ContactForm';
 import type { Metadata } from 'next'
-import { defaultMetadata } from '../lib/metadata'
+import { defaultMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = {
   title: 'Contact RDAS Solutions - Get in Touch | RDAS Solutions Limited',
