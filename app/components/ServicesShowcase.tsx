@@ -43,8 +43,27 @@ const ServicesShowcase = () => {
     },
   ];
 
+  const servicesStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: services.map((service, index) => ({
+      '@type': 'Service',
+      position: index + 1,
+      name: service.title,
+      description: service.description,
+      provider: {
+        '@type': 'Organization',
+        name: 'RDAS Solutions Limited'
+      }
+    }))
+  }
+
   return (
     <section className="py-20 bg-[#000033] text-white" id="services">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesStructuredData) }}
+      />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

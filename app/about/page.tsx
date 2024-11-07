@@ -1,5 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next'
+import { defaultMetadata } from '../lib/metadata'
+
+export const metadata: Metadata = {
+  title: 'About RDAS Solutions - Our Story & Mission | RDAS Solutions Limited',
+  description: 'Learn about RDAS Solutions Limited, a leading IT solutions provider in Nigeria specializing in database management, IT training, and software development.',
+  openGraph: {
+    ...defaultMetadata.openGraph,
+    title: 'About RDAS Solutions - Our Story & Mission',
+    description: 'Learn about RDAS Solutions Limited, a leading IT solutions provider in Nigeria.',
+  }
+}
 
 const AboutPage: React.FC = () => {
   return (

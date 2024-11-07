@@ -1,5 +1,17 @@
-"use client"
 import ContactForm from '../components/ContactForm';
+import type { Metadata } from 'next'
+import { defaultMetadata } from '../lib/metadata'
+
+export const metadata: Metadata = {
+  title: 'Contact RDAS Solutions - Get in Touch | RDAS Solutions Limited',
+  description: 'Contact RDAS Solutions Limited for database solutions, IT training, and software development services. Located in Sabo, Yaba, Lagos.',
+  openGraph: {
+    ...defaultMetadata.openGraph,
+    title: 'Contact RDAS Solutions - Get in Touch',
+    description: 'Contact RDAS Solutions Limited for your IT solutions needs.',
+  }
+}
+
 const ContactPage: React.FC = () => {
   return (
     <div className="bg-gray-50 min-h-screen">

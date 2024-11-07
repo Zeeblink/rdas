@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 
 interface Service {
   title: string;
@@ -86,7 +87,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <img
+            <Image
               src={service.image}
               alt={service.title}
               className="w-full h-64 object-cover rounded-lg mb-6"

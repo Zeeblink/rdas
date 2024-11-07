@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { defaultMetadata } from './lib/metadata'
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -16,8 +17,21 @@ import Footer from "./components/Footer";
 // });
 
 export const metadata: Metadata = {
-  title: "RDAS Solutions",
-  description: "Empowering businesses through innovative database solutions",
+  ...defaultMetadata,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 };
 
 export default function RootLayout({

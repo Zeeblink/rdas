@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import AboutDropdown from './AboutDropdown';
 import Link from 'next/link'
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,11 @@ const Header = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" aria-label="Homepage">
-                <img src="/rdassl_logo_1.png" alt="RDAS Logo" className="h-8 w-auto" />
+                <Image 
+                src={"/rdassl_logo_1.png"}
+                alt='RDAS Logo'
+                className='h-8 w-auto'
+                />
               </Link>
             </div>
 
@@ -38,12 +43,16 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 text-[#003366]"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            <nav aria-label="Main navigation">
+              <button 
+                aria-label="Toggle menu"
+                aria-expanded={isMenuOpen}
+                className="md:hidden"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </nav>
           </div>
 
           {/* Mobile Navigation */}

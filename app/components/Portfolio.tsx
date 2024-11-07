@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const PortfolioShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -83,7 +84,7 @@ const PortfolioShowcase = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-lg overflow-hidden shadow-lg"
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
                   className="w-full h-64 object-cover"

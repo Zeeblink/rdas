@@ -1,4 +1,16 @@
 import React from 'react';
+import type { Metadata } from 'next'
+import { defaultMetadata } from '../lib/metadata'
+
+export const metadata: Metadata = {
+  title: 'Careers at RDAS Solutions - Join Our Team | RDAS Solutions Limited',
+  description: 'Explore career opportunities at RDAS Solutions Limited. Join our team of IT professionals and make an impact in the technology sector.',
+  openGraph: {
+    ...defaultMetadata.openGraph,
+    title: 'Careers at RDAS Solutions - Join Our Team',
+    description: 'Join RDAS Solutions Limited and build your career in IT.',
+  }
+}
 
 const CareerPage = () => {
   return (
