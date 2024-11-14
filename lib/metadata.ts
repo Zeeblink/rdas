@@ -1,7 +1,7 @@
 export const defaultMetadata = {
-  title: 'RDAS Solutions Limited - Advanced Database Solutions',
-  description: 'RDAS Solutions Limited provides innovative database solutions, IT training, and custom software development services to empower businesses across Nigeria.',
-  keywords: 'database solutions, IT training, software development, RDAS Solutions, Nigeria',
+  title: 'RDAS Solutions Limited - Advanced Software Solutions',
+  description: 'RDAS Solutions Limited provides innovative software solutions, IT training, and custom software development services to empower businesses across Nigeria.',
+  keywords: 'rdas, rdas solutions, software solution, custom software solution, database solutions, IT training, software development, RDAS Solutions, Nigeria',
   openGraph: {
     type: 'website',
     locale: 'en_NG',
@@ -18,8 +18,8 @@ export const defaultMetadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RDAS Solutions Limited - Advanced Database Solutions',
-    description: 'Empowering businesses through innovative database solutions.',
+    title: 'RDAS Solutions Limited - Advanced Software Solutions',
+    description: 'Empowering businesses through innovative custom software solutions.',
     images: ['/og-image.jpg'],
   },
 } 
