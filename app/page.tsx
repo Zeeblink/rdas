@@ -3,7 +3,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 // const inter = Inter({ subsets: ['latin'] })
-import Sections from './components/Sections'
+import Sections from '@/components/Sections'
 
 export const metadata = {
   title: 'RDAS Solutions Limited - Advanced Database Solutions',
