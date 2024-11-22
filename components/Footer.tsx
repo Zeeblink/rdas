@@ -59,7 +59,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
+                  <Link href="/#services" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
                     <span>&gt; Services</span>
                   </Link>
                 </li>
