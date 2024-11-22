@@ -34,7 +34,7 @@ const Header = () => {
                   About
                 </button>
               </div>
-              <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
+              <a href="/#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
               <a href="/careers" className="text-[#003366] hover:text-orange-500 transition-colors">Careers</a>
               <Link className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"
               href="/contact">
@@ -61,7 +61,7 @@ const Header = () => {
               <div className="flex flex-col space-y-4 p-4">
                 <a href="/" className="text-[#003366] hover:text-orange-500 transition-colors">Home</a>
                 <a href="/about" className="text-[#003366] hover:text-orange-500 transition-colors">About</a>
-                <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
+                <a href="/#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
                 <a href="/careers" className="text-[#003366] hover:text-orange-500 transition-colors">Careers</a>
                 <Link className="bg-[#003366] text-white text-center px-6 py-2 rounded hover:bg-opacity-90 transition-colors"
                   href="/contact">
