@@ -13,12 +13,14 @@ const Header = () => {
     <>
       <header className="customContainer bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
         <nav className="container mx-auto px-4 h-16">
-          <div className="flex justify-between items-center h-full">
+          <div className="flex items-center justify-between h-full">
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" aria-label="Homepage">
                 <Image 
                 src={"/rdassl_logo_1.png"}
+                width={100}
+                height={100}
                 alt='RDAS Logo'
                 className='h-8 w-auto'
                 />
@@ -34,7 +36,7 @@ const Header = () => {
                   About
                 </button>
               </div>
-              <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
+              <a href="/#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
               <a href="/careers" className="text-[#003366] hover:text-orange-500 transition-colors">Careers</a>
               <Link className="bg-[#003366] text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"
               href="/contact">
@@ -43,7 +45,6 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <nav aria-label="Main navigation">
               <button 
                 aria-label="Toggle menu"
                 aria-expanded={isMenuOpen}
@@ -52,7 +53,6 @@ const Header = () => {
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
-            </nav>
           </div>
 
           {/* Mobile Navigation */}
@@ -61,7 +61,7 @@ const Header = () => {
               <div className="flex flex-col space-y-4 p-4">
                 <a href="/" className="text-[#003366] hover:text-orange-500 transition-colors">Home</a>
                 <a href="/about" className="text-[#003366] hover:text-orange-500 transition-colors">About</a>
-                <a href="#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
+                <a href="/#services" className="text-[#003366] hover:text-orange-500 transition-colors">Services</a>
                 <a href="/careers" className="text-[#003366] hover:text-orange-500 transition-colors">Careers</a>
                 <Link className="bg-[#003366] text-white text-center px-6 py-2 rounded hover:bg-opacity-90 transition-colors"
                   href="/contact">

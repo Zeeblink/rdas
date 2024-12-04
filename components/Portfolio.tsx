@@ -87,6 +87,8 @@ const PortfolioShowcase = () => {
                 <Image
                   src={item.image}
                   alt={item.title}
+                  width={600}
+                  height={400}
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">

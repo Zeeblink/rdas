@@ -6,7 +6,7 @@ config.autoAddCss = false
 import Sections from '@/components/Sections'
 
 export const metadata = {
-  title: 'RDAS Solutions Limited - Advanced Database Solutions',
+  title: 'RDAS Solutions Limited - Advanced Data Solutions',
   description: 'Empowering businesses through innovative database solutions.',
 }
 

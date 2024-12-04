@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-semibold mb-4">RDAS Solutions</h3>
-              <p className="text-gray-400">Empowering businesses through innovative database solutions.</p>
+              <p className="text-gray-400">Empowering businesses through innovative data solutions.</p>
             </div>
 
             <div>
@@ -84,7 +84,7 @@ const Footer = () => {
               <p className="text-gray-400 mt-2">Email: info@rdas.com.ng</p>
             </div>
 
-            <div>
+            {/* <div>
               <h3 className="text-xl font-semibold mb-4">Join Our Newsletter</h3>
               <form className="flex flex-col space-y-4">
                 <input
@@ -99,7 +99,7 @@ const Footer = () => {
                   Subscribe
                 </button>
               </form>
-            </div>
+            </div> */}
           </div>
 
           <div className="mt-8 text-center">
