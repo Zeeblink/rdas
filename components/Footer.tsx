@@ -59,7 +59,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
+                  <Link href="/#services" className="text-gray-400 hover:text-[#FF6600] transition duration-300 flex items-center">
                     <span>&gt; Services</span>
                   </Link>
                 </li>
@@ -84,7 +84,7 @@ const Footer = () => {
               <p className="text-gray-400 mt-2">Email: info@rdas.com.ng</p>
             </div>
 
-            {/* <div>
+            <div>
               <h3 className="text-xl font-semibold mb-4">Join Our Newsletter</h3>
               <form className="flex flex-col space-y-4">
                 <input
