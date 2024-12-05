@@ -84,6 +84,7 @@ const Footer = () => {
               <p className="text-gray-400 mt-2">Email: info@rdas.com.ng</p>
             </div>
 
+            {/* Newsletter section commented out for now */}
             {/* <div>
               <h3 className="text-xl font-semibold mb-4">Join Our Newsletter</h3>
               <form className="flex flex-col space-y-4">
