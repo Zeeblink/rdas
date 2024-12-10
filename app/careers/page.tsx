@@ -13,6 +13,22 @@ export const metadata: Metadata = {
 }
 
 const CareerPage = () => {
+  const positions = [
+    {
+      title: 'Full-stack Developer',
+      location: 'Remote, Nigeria',
+      type: 'Full-time',
+      description: 'We are looking for a skilled Fullstack Developer with expertise in Laravel, JavaScript, and Vue.js to develop APIs and dynamic web applications.',
+      link: '/careers/full-stack-developer',
+    },
+    // {
+    //   title: 'Database Engineer',
+    //   location: 'Location: Remote | Contract',
+    //   type: 'Full-time',
+    //   description: 'Seeking a skilled Database Engineer to optimize and maintain our databases. Join us in ensuring our data solutions are top-notch.',
+    //   link: '/careers/front-end-developer',
+    // },
+  ];
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
@@ -48,29 +64,20 @@ const CareerPage = () => {
       </section>
 
       {/* Job Openings Section */}
-      {/* <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 py-16">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-primary text-center mb-6">Open Positions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-secondary">Front-End Developer</h3>
-              <p className="text-gray-700 mt-2 mb-4">Location: Lagos, Nigeria | Full-time</p>
-              <p className="text-gray-600 mb-4">
-                We are looking for a talented front-end developer to join our team. You’ll work on responsive web apps, contribute to the overall design, and collaborate with our back-end team.
-              </p>
-              <a href="#" className="text-primary hover:underline">Read More & Apply →</a>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{positions.map((position, index) => (
+            <div key={index} className="p-6 bg-white border border-gray-200 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold text-secondary">{position.title}</h3>
+              <p className="text-gray-700 mt-2 mb-4">{position.location} | {position.type}</p>
+              <p className="text-gray-600 mb-4">{position.description}</p>
+              <a href={position.link} className="text-primary hover:underline">Read More & Apply →</a>
             </div>
-            <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-secondary">Database Engineer</h3>
-              <p className="text-gray-700 mt-2 mb-4">Location: Remote | Contract</p>
-              <p className="text-gray-600 mb-4">
-                Seeking a skilled Database Engineer to optimize and maintain our databases. Join us in ensuring our data solutions are top-notch.
-              </p>
-              <a href="#" className="text-primary hover:underline">Read More & Apply →</a>
-            </div>
+          ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Call to Action Section */}
       <section className="bg-primary text-white py-16">
