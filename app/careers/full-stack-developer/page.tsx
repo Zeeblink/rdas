@@ -33,7 +33,7 @@ const FullStackDeveloperPage = () => {
                         Offer:
                     </h2>
                     <ul className="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Salary: 300–350k (based on experience).</li>
+                        {/* <li>Salary: 300–350k (based on experience).</li> */}
                         <li>Supportive and innovative work environment.</li>
                     </ul>
                 </section>
