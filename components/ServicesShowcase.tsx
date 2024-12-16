@@ -1,69 +1,28 @@
+"use client";
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faMobileAlt, faGraduationCap, faDatabase, faCogs, faRobot } from '@fortawesome/free-solid-svg-icons';
+import { servicesData as services } from '@/lib/servicesData';
 import Image from 'next/image';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import ServiceDetails from './ServiceDetails'; // Import your modal component
+
+// Add interface for service type
+interface Service {
+  title: string;
+  description: string;
+  icon: IconDefinition;
+  image: string;
+}
 
 const ServicesShowcase = () => {
-  const services = [
-    {
-      title: 'Custom Software Development',
-      description: 'Tailored software solutions to meet your unique business needs and challenges.',
-      icon: faLaptopCode,
-      image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-        title: 'App Development',
-        description: 'Building innovative mobile applications for iOS and Android platforms to engage your customers..',
-        icon: faMobileAlt,
-        image: 'https://images.pexels.com/photos/163184/instagram-cell-phone-tablet-device-163184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      },
-    {
-      title: 'IT Training',
-      description: 'Training programs in computer, network, and technology aim to develop tech-savvy individuals, equipping them to maximize their IT skills in any environment, whether corporate or non-corporate.',
-      icon: faGraduationCap,
-      image: 'https://images.pexels.com/photos/7792829/pexels-photo-7792829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      title: 'Database Support',
-      description: 'Database Support services that assist organizations in managing and maintaining their databases effectively.',
-      icon: faDatabase,
-      image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      title: 'Data Engineering',
-      description: 'Data Engineering services that make data more useful and accessible for consumers.',
-      icon: faCogs,
-      image: 'https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-    {
-      title: 'Artificial Intelligence',
-      description: 'Develop systems that can learn, reason, and adapt to perform complex tasks autonomously.',
-      icon: faRobot,
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    },
-  ];
+  const [selectedService, setSelectedService] = useState<Service | null>(null); // Track selected service
+  const [isModalOpen, setIsModalOpen] = useState(false); // Control modal visibility
 
-  const servicesStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: services.map((service, index) => ({
-      '@type': 'Service',
-      position: index + 1,
-      name: service.title,
-      description: service.description,
-      provider: {
-        '@type': 'Organization',
-        name: 'RDAS Solutions Limited'
-      }
-    }))
-  }
+  
 
   return (
     <section className="py-20 bg-[#000033] text-white" id="services">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesStructuredData) }}
-      />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -99,12 +58,15 @@ const ServicesShowcase = () => {
               <div className="p-6">
                 <FontAwesomeIcon icon={service.icon} className="text-secondary text-3xl mb-4" />
                 <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                {/* <a
-                  href="#"
+                <p className="text-gray-600 mb-4">{service.excerpt}</p>
+                <button
+                  onClick={() => {
+                    setSelectedService(service); // Set the selected service
+                    setIsModalOpen(true); // Open modal
+                  }}
                   className="text-secondary hover:text-[#003366] transition-colors duration-300 inline-flex items-center"
                 >
-                  View Details
+                  Learn More
                   <svg
                     className="w-4 h-4 ml-2"
                     fill="none"
@@ -119,26 +81,21 @@ const ServicesShowcase = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </a> */}
+                </button>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <a
-            href="#"
-            className="inline-block bg-secondary text-white px-8 py-3 rounded-full hover:bg-[#003366] transition-colors duration-300 text-lg font-semibold"
-          >
-            EXPLORE SERVICES
-          </a>
-        </motion.div> */}
+        {/* Service Modal */}
+        {selectedService && (
+          <ServiceDetails
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)} // Close modal
+            title={selectedService.title}
+            content={selectedService.description}
+          />
+        )}
       </div>
     </section>
   );
