@@ -1,4 +1,4 @@
-import { faLaptopCode, faMobileAlt, faGraduationCap, faDatabase, faCogs, faRobot, faMobile, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faMobileAlt, faGraduationCap, faDatabase, faCogs, faRobot, faCode } from '@fortawesome/free-solid-svg-icons';
 
 export const servicesData = [
     {
