@@ -4,7 +4,7 @@ export const servicesData = [
     {
         title: "Custom Software Development",
         excerpt: "At RDAS Software Limited, we specialize in creating tailored software solutions designed to address your unique business challenges and needs.",
-        description: "At RDAS Software Limited, we specialize in creating tailored software solutions designed to address your unique business challenges and needs. Our team works closely with you to understand your goals, processes, and pain points, ensuring the delivery of a solution that aligns perfectly with your vision. From conceptualization to deployment, we focus on innovation, scalability, and efficiency, empowering your business to achieve operational excellence. Whether it&apos;s streamlining workflows or enhancing customer experiences, our custom solutions help you stay ahead in a competitive landscape.",
+        description: "At RDAS Software Limited, we specialize in creating tailored software solutions designed to address your unique business challenges and needs. Our team works closely with you to understand your goals, processes, and pain points, ensuring the delivery of a solution that aligns perfectly with your vision. From conceptualization to deployment, we focus on innovation, scalability, and efficiency, empowering your business to achieve operational excellence. Whether it's streamlining workflows or enhancing customer experiences, our custom solutions help you stay ahead in a competitive landscape.",
         icon: faLaptopCode,
         image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
