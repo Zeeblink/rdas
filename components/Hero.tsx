@@ -4,25 +4,11 @@ import Link from 'next/link'
 
 const Hero = () => {
     return (
-        <section className="overflow-hidden pb-10 lg:pb-0 bg-cover bg-center w-full hero-bg" style={{ backgroundImage: "url('/background.png')" }}>
+        <section className="overflow-hidden pt-16 md:pt-0 pb-10 lg:pb-0 bg-cover bg-center w-full hero-bg" style={{ backgroundImage: "url('/background.png')" }}>
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row items-center justify-between">
-                    {/* Image Content */}
-                    <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
-                        <div className="relative">
-                            <Image
-                                src="/hero-image.png"
-                                alt="Digital Transformation"
-                                layout="responsive" // Adjust layout as needed
-                                width={500} // Set appropriate width
-                                height={300} // Set appropriate height
-                                className=""
-                            />
-                        </div>
-                    </div>
-
+                <div className="flex flex-col md:flex-row-reverse items-center justify-between">
                     {/* Text Content */}
-                    <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
+                    <div className="w-full md:w-1/2 flex flex-col items-center md:items-start mb-14 md:mb-0">
                         <h1 className="text-3xl text-center md:text-start md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#003366] leading-tight mb-4">
                             Empowering Your{' '}
                             <span className="text-orange-500">Digital</span>{' '}
@@ -37,6 +23,22 @@ const Hero = () => {
                             Schedule a Free Consultation
                         </Link>
                     </div>
+
+                    {/* Image Content */}
+                    <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+                        <div className="relative">
+                            <Image
+                                src="/hero-image.png"
+                                alt="Digital Transformation"
+                                layout="responsive" // Adjust layout as needed
+                                width={500} // Set appropriate width
+                                height={300} // Set appropriate height
+                                className=""
+                            />
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
         </section>
