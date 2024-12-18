@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { servicesData as services } from '@/lib/servicesData';
 import Image from 'next/image';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import ServiceDetails from './ServiceDetails'; // Import your modal component
+import ServiceDetails from './ServiceDetails';
 
-// Add interface for service type
+// Interface for service type
 interface Service {
   title: string;
   description: string;
@@ -66,7 +66,7 @@ const ServicesShowcase = () => {
                   }}
                   className="text-secondary hover:text-[#003366] transition-colors duration-300 inline-flex items-center"
                 >
-                  Learn More
+                  Read More
                   <svg
                     className="w-4 h-4 ml-2"
                     fill="none"
